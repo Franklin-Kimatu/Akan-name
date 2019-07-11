@@ -4,6 +4,7 @@
 #### By * Lastborn Tech Co. 
         *  Franklin_kimatu.
 ## Description
+> The myAkan_name application is an application that 'gives' user Akan name. It realies on their Date of Birth and gender of the user. The user enters the credentials and on clicking the submit, it outputs the user Akan name.
 ## Setup/Installation Requirements
 * Visit the Webpage by link 
 * Date of birth.
