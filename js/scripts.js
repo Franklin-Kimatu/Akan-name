@@ -1,19 +1,24 @@
+var cdate, year, month, date, day;
 function akan_name(){
-var cdate =document.getElementById("cdate").value;
-var year =document.getElementById("year").value;
-var month= document.getElementById("month").value;
-var date = document.getElementById("date").value;
-var gender= document.getElementById("gender");
-var day =(((cdate/4)-2* cdate-1) +((5**year/4))+ ((26*(month +1)/10))+ date)%7;
+cdate =document.getElementById("cdate").value;
+year =document.getElementById("year").value;
+month= document.getElementById("month").value;
+date = document.getElementById("date").value;
+// var gender= document.getElementById("gender");
+}
+function calc(){
+    akan_name();
+    day =(((cdate/4)-2* cdate-1) +((5**year/4))+ ((26*(month +1)/10))+ date)%7;
+    return (Math.trunc(day));
 }
 
-
 function func(){
+calc();
 
-akan_name();
 if(cdate<19 || cdate>20){
     alert("Please enter a valid century year");
 }
+
 if(date<=0 && date>31){
     alert("Please enter a valid date number");
 }
@@ -22,11 +27,13 @@ if(month<=0 && month>12){
 }
 if(gender=""){
     prompt("Enter your gender");
-
 }
-if(radio[0].checked == true){
+
+
+var rads = document.getElementsByName("rads");
+if(rads[0].checked == true){
  gender = "male";
-}else if(radio[1].checked == true){
+}else if(rads[1].checked == true){
  gender = "female";
 }else{
     console.log("pass");
@@ -67,5 +74,7 @@ else if(gender="female"){
     }else{
         alert("You are on Saturday. Your Akan Name is Ama.")
     }
+}else{
+    console.log("pass");
 }
 }
