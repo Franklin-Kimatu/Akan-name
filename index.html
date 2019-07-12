@@ -24,9 +24,12 @@
                         Year number:<input type ="number" id ="year" placeholder="eg. 1990. year nuber is 90" maxlength ="2"><br>
                         Month of Birth:<input type="number" id="month" placeholder="eg.1 for Jan." maxlength="2"><br>
                         Date of birth:<input type="number" id="date"><br>
-                        Choose your gender:<br><input type="radio" id="gender" value="male" >Male<br>
-                                               <input type="radio" id="gender" value="female">Female<br>
-                                               <input type="submit" value="Submit" onclick="akan_name()">
+                        Choose your gender:<br>
+                        <form action="">
+                                <input type="radio" id="gender" value="male" name="radio" >Male<br>
+                                <input type="radio" id="gender" value="female" name="radio">Female<br>
+                        </form>
+                        <input type="submit" value="Submit" onclick="func()">
                     </form>
             </div>
         </div>

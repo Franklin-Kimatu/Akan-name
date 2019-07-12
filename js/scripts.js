@@ -3,11 +3,15 @@ var cdate =document.getElementById("cdate").value;
 var year =document.getElementById("year").value;
 var month= document.getElementById("month").value;
 var date = document.getElementById("date").value;
-//var gender= document.getElementById("gender");
+var gender= document.getElementById("gender");
 var day =(((cdate/4)-2* cdate-1) +((5**year/4))+ ((26*(month +1)/10))+ date)%7;
 }
 
-if(cdate<19 && cdate>20){
+
+function func(){
+
+akan_name();
+if(cdate<19 || cdate>20){
     alert("Please enter a valid century year");
 }
 if(date<=0 && date>31){
@@ -20,7 +24,15 @@ if(gender=""){
     prompt("Enter your gender");
 
 }
-var gender=prompt("Input your gender;")
+if(radio[0].checked == true){
+ gender = "male";
+}else if(radio[1].checked == true){
+ gender = "female";
+}else{
+    console.log("pass");
+}
+
+
 if(gender= "male"){
     if(day==0){
         alert("You were born on sunday. Your Akan name is Kwasi");
@@ -51,6 +63,9 @@ else if(gender="female"){
     }else if(day==4){
         alert("You were born on Thursday. Your Akan name is Yaa.");
     }else if(day==5){
-        alert("You were born on a ")
+        alert("You were born on a Friday. Your Akan name is Afua.");
+    }else{
+        alert("You are on Saturday. Your Akan Name is Ama.")
     }
+}
 }
