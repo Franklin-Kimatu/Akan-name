@@ -42,6 +42,10 @@ else if(gender="female"){
     if(day=0){
         alert("You were born on a Sunday. Your Akan name is Akosua.");
     }else if(day=1){
-        alert()
+        alert("You were born on a Monday. Your Akan name is Adwoa.");
+    }else if(day=2){
+        alert("You were born on a Tuesday. Your Akan name is Adena.")
+    }else if(day=3){
+        alert("You were born on a ")
     }
 }
