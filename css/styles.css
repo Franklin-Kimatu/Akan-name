@@ -1,8 +1,16 @@
 body{
-    background-image: url("https://s3.envato.com/files/71eeb05b-4caf-4444-b807-0db0dbc3ea33/inline_image_preview.jpg");
+     background-image: url("https://trade.babymoos.com/wp/wp-content/uploads/Punk-Baby-Top-Pink-Girls-Skull-T-Shirt-Funky-Glitter-Skull-Print-Toddler-Bright-Cool-Pink-Clothes1.jpg");
+    
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+#one1{
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index:2;
+    background-color:rgba(0,0,0,0.7);
 }
 #one{
     background-color: black;
@@ -12,9 +20,9 @@ body{
 h1{
     color: hotpink;
     text-align: center;
-    padding-top: 40px;
-    font-family:;
-    font-size: 50px;
+    padding-top: 20px;
+    font-family: 'Tangerine', cursive;
+    font-size: 90px;
 }
 #two2{
 text-align: center;
@@ -22,7 +30,7 @@ border:2px solid hotpink;
 height: 110px;
 width: 60%;
 margin:auto;
-margin-top:180px;
+margin-top:45px;
 background-color:rgb(238, 192, 192);
 border-radius: 5px;
 }
@@ -34,4 +42,26 @@ button{
     font-size: 24px;
     border:2px solid hotpink;
     border-radius: 7px;
+}
+a { text-decoration: none;
+}
+h3{
+    color:rgb(238, 192, 192);
+    text-align: center;
+    margin-top:35px;
+    font-size: 30px;
+}
+li{
+    color: hotpink;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+h4{
+    font-size:30px;
+}
+form{
+    text-align: center;
+    color: hotpink;
+    font-size: 24px;
 }
