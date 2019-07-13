@@ -70,4 +70,9 @@ form{
 }
 input[type=submit]{
     text-align:center;
+    margin-left: 48%;
+    border:2px solid hotpink;
+    border-radius: 5px;
+    background-color: hotpink;
+    font-size: 30px;
 }
