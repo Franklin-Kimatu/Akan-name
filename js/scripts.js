@@ -36,9 +36,9 @@ function validate(){
 function genders(){
     validate();
     rads= document.getElementsByName("rads");
-    if(rads[0].checked==true){
+    if(rads[0].checked){
         gender == "male";
-    } else if(rads[1].checked ==true){
+    } else if(rads[1].checked){
         gender =="female";
     } else {
         console.log("pass");

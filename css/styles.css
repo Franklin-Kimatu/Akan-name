@@ -68,3 +68,6 @@ form{
     color: hotpink;
     font-size: 24px;
 }
+input[type=submit]{
+    text-align:center;
+}
