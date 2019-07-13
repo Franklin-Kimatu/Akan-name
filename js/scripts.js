@@ -5,12 +5,12 @@ function akan(){
     month=document.getElementById("month").value;
     date=document.getElementById("date").value;
     day =(((cdate/4) -2 * cdate -1) + ((5 * year/4)) + ((26 *(month + 1)/10)) + date) % 7;
-    return day;
+    return (Math.round(day));
     }
  
 function validate(){
 
-    var keyren= akan();
+    akan();
     if(cdate >20){
         alert("Please enter a valid century date.");
     } else {
@@ -49,37 +49,37 @@ function givenames(){
 
     genders();
     if(gender =="male"){
-        if(keyren ==0){
+        if(day==0){
             alert("You were born on Sunday. You akan name is Kwasi.");
-        } else if(keyren ==1){
+        } else if(day==1){
             alert("You were born on Monday. Your akan name is Kwadwo.");
-        } else if(keyren ==2){
+        } else if(day ==2){
             alert("You were born a Tuesday. Your akan name is Kwabena.");
-        } else if(keyren ==3){
+        } else if(day ==3){
             alert("You were born on Wednesday. You akan name is Kwaku.");
-        } else if( keyren ==4){
+        } else if( day==4){
             alert("You were born on Thursday. Your akan name is Yaw");
-        } else if(keyren ==5){
+        } else if(day==5){
             alert("You were born on Friday. You akan name is Kofi");
-        } else if(keyren ==6){
+        } else if(day==6){
             alert("You were born on Saturday. You akan name is Kwame.");
         } else{
             console.log("pass");
         }
     } else if(gender =="female"){
-        if(keyren ==0){
+        if(day==0){
             alert("You were born on a Sunday. You akan name is Akosua.");
-        } else if(keyren ==1){
+        } else if(day==1){
             alert("You were born on a Monday. Your akan name is Adwoa.");
-        } else if(keyren ==2){
+        } else if(day ==2){
             alert("You were born on a Tuesday. You akan name is Abena.");
-        } else if(keyren ==3){
+        } else if(day ==3){
             alert("You were born on a Wednesday. Your akan name is Akua.");
-        } else if(keyren ==4){
+        } else if(day ==4){
             alert("You were born on a Thursday. You akan name is Yaa");
-        } else if(keyren ==5){
+        } else if(day ==5){
             alert("You were born on a Friday. Your akan name is Afua");
-        } else if(keyren ==6){
+        } else if(day ==6){
             alert("You were born on a Saturday. Your akan name is Ama.");
         } else {
             console.log("pass")
