@@ -20,16 +20,16 @@
             <div id ="three">
                     <form>
                         Enter the following details:<br>
-                        Century year:<input type="number" id ="cdate" placeholder="eg. 1990. century year is 19" maxlength ="2"><br>
-                        Year number:<input type ="number" id ="year" placeholder="eg. 1990. year nuber is 90" maxlength ="2"><br>
-                        Month of Birth:<input type="number" id="month" placeholder="eg.1 for Jan." maxlength="2"><br>
-                        Date of birth:<input type="number" id="date"><br>
+                        Century year:<input type="number" id ="cdate" required><br>
+                        Year number:<input type ="number" id ="year" required><br>
+                        Month of Birth:<input type="number" id="month" required><br>
+                        Date of birth:<input type="number" id="date" required><br>
                         Choose your gender:<br>
                         <form action="">
                                 <input type="radio" id="gender" value="male" name="rads">Male<br>
                                 <input type="radio" id="gender" value="female" name="rads">Female<br>
                         </form>
-                        <button onclick="func()" onclick="document.location.reload(true)">Submit</button>
+                        <button onclick="givenames()">Submit</button>
                     </form>
             </div>
         </div>

@@ -1,13 +1,13 @@
 html{
     scroll-behavior: smooth;    
 }
-body{
+/* body{
      background-image: url("https://trade.babymoos.com/wp/wp-content/uploads/Punk-Baby-Top-Pink-Girls-Skull-T-Shirt-Funky-Glitter-Skull-Print-Toddler-Bright-Cool-Pink-Clothes1.jpg");
     
     background-repeat: no-repeat;
     background-size: cover;
     
-}
+} */
 #one1{
     position: absolute;
     height:100%;
