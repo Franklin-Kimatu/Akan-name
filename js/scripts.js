@@ -1,10 +1,10 @@
 var cdate, year, month, date, day, rads, gender;
 function akan(){
-    cdate =document.getElementById("cdate").value;
-    year =document.getElementById("year").value;
+    cdate=document.getElementById("cdate").value;
+    year=document.getElementById("year").value;
     month=document.getElementById("month").value;
     date=document.getElementById("date").value;
-    day =(((cdate/4) -2 * cdate -1) + ((5 * year/4)) + ((26 *(month + 1)/10)) + date) % 7;
+    day=(((cdate/4) -2 * cdate -1) + ((5 * year/4)) + ((26 *(month + 1)/10)) + date) % 7;
     return (Math.round(day));
     }
  
@@ -37,7 +37,7 @@ function genders(){
     validate();
     rads= document.getElementsByName("rads");
     if(rads[0].checked==true){
-        gender == "male";
+        gender =="male";
     } else if(rads[1].checked==true){
         gender =="female";
     } else {
