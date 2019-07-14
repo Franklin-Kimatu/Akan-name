@@ -46,41 +46,44 @@ function genders(){
 } 
 
 function givenames(){
+    var weekDays=["Sunday.","Monday.","Tuesday.","Wednesday.","Thursday.","Friday.","Saturday."];
+    var male=["Kwasi.","Kwadwo.","Kwabena.","Kwaku.","Yaw.","Kofi.","Kwame."];
+    var female=["Akosua.","Adwoa.","Abena.","Akua.","Yaa.","Afua.","Ama."];
 
     genders();
     if(gender =="male"){
         if(day==0){
-            alert("You were born on Sunday. You akan name is Kwasi.");
+            alert("You were born on "+weekDays[0] + "You akan name is "+ male[0]);
         } else if(day==1){
-            alert("You were born on Monday. Your akan name is Kwadwo.");
+            alert("You were born on "+weekDays[1] + "Your akan name is " + male[1]);
         } else if(day ==2){
-            alert("You were born a Tuesday. Your akan name is Kwabena.");
+            alert("You were born a "+weekDays[2] + "Your akan name is " +male[2]);
         } else if(day ==3){
-            alert("You were born on Wednesday. You akan name is Kwaku.");
+            alert("You were born on "+ weekDays[3] + "You akan name is "+male[3]);
         } else if( day==4){
-            alert("You were born on Thursday. Your akan name is Yaw");
+            alert("You were born on "+weekDays[4] + "Your akan name is "+male[4]);
         } else if(day==5){
-            alert("You were born on Friday. You akan name is Kofi");
+            alert("You were born on "+weekDays[5] + "You akan name is "+male[5]);
         } else if(day==6){
-            alert("You were born on Saturday. You akan name is Kwame.");
+            alert("You were born on "+weekDays[6] +"You akan name is "+male[6]);
         } else{
             console.log("pass");
         }
     } else if(gender =="female"){
         if(day==0){
-            alert("You were born on a Sunday. You akan name is Akosua.");
+            alert("You were born on a "+weekDays[0] +"+You akan name is "+female[0]);
         } else if(day==1){
-            alert("You were born on a Monday. Your akan name is Adwoa.");
+            alert("You were born on a "+weekDays[1] +"Your akan name is "+female[1]);
         } else if(day ==2){
-            alert("You were born on a Tuesday. You akan name is Abena.");
+            alert("You were born on a "+weekDays[2] +"You akan name is "+female[2]);
         } else if(day ==3){
-            alert("You were born on a Wednesday. Your akan name is Akua.");
+            alert("You were born on a "+weekDays[3] +"Your akan name is "+female[3]);
         } else if(day ==4){
-            alert("You were born on a Thursday. You akan name is Yaa");
+            alert("You were born on a "+weekDays[4] +"You akan name is"+female[4]);
         } else if(day ==5){
-            alert("You were born on a Friday. Your akan name is Afua");
+            alert("You were born on a "+weekDays[5] +"Your akan name is "+female[5]);
         } else if(day ==6){
-            alert("You were born on a Saturday. Your akan name is Ama.");
+            alert("You were born on a "+weekDays[6] +"Your akan name is "+female[6]);
         } else {
             console.log("pass")
         }
