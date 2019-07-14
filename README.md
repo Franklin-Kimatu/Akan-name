@@ -12,6 +12,7 @@
 
 ## Known Bugs
 * slow speed.
+* Not displaying exact day after user's input validation.
 ## Technologies Used
 * HTML.
 * CSS.
