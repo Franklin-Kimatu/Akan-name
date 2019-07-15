@@ -73,18 +73,6 @@ function genders(){
         genders();       
     }
     
-    // function givenames(){
-    //     
-    //     genders();
-    //     if(gender =="male"){
-            
-    //     } else if(gender =="female"){
-            
-    //     }else{
-    //         console.log("pass");
-    //     }
-    // }
-    
  
 function validate(){
 
