@@ -23,6 +23,7 @@
 * Tel : 0790800808
 ### License
 * The myAkan_name application has been coded and licensed under The Lastborn Tech Company.*
-Copyright (c) 2019. 
+Copyright (c) 2019.
+
       * Lastborn Tech Company.
       * Franklin_kimatu 
