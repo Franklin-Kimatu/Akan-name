@@ -18,19 +18,19 @@
                 <button onclick="document.location.reload(true)"><a href ="#three">Search yours</a></button>
             </div><br>
             <div id ="three">
-                    <form>
+                    
                         Enter the following details:<br>
                         Century year:&nbsp;eg. 19 for 1990.<br><br><input type="number" id ="cdate" required><br><br><br>
                         Year number:&nbsp;eg.90 for 1990.<br><br><input type ="number" id ="year" required><br><br><br>
                         Month of Birth:&nbsp;eg. 06 for June<br><br><input type="number" id="month" required><br><br><br>
                         Date of birth:<br><br><input type="number" id="date" required><br><br><br>
                         Choose your gender:<br>
-                        <form action="">
-                                <input type="radio" id="gender" value="male" name="rads" onclick="genders();">Male<br>
-                                <input type="radio" id="gender" value="female" name="rads" onclick="genders();">Female<br>
-                        </form><br>
-                        <button onclick="givenames()">Submit</button>
-                    </form>
+                        
+                        <input type="radio" id="gender" name="radios" id="male" checked>Male<br>
+                        <input type="radio" id="gender"  name="radios" id="female" >Female<br>
+                        <br>
+                        <button type="submit" onclick="getName();">Submit</button>
+                    
             </div>
         </div>
         <script src ="js/scripts.js"></script>
