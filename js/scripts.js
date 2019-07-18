@@ -1,101 +1,98 @@
-var cdate, year, month, date, days, rads, gender;
-var weekDays=["Sunday.","Monday.","Tuesday.","Wednesday.","Thursday.","Friday.","Saturday."];
-var male=["Kwasi.","Kwadwo.","Kwabena.","Kwaku.","Yaw.","Kofi.","Kwame."];
-var female=["Akosua.","Adwoa.","Abena.","Akua.","Yaa.","Afua.","Ama."];
-    cdate=document.getElementById("cdate").value;
-    year=document.getElementById("year").value;
-    month=document.getElementById("month").value;
-    date=document.getElementById("date").value;
-function akan(){
-    
-    days=(((cdate/4) -2 * cdate -1) + ((5 * year/4)) + ((26 *(month + 1)/10)) + date) % 7;
-    return (Math.round(days));
-}
-function genders(){
-        var day =akan();
-        var radios= document.getElementsByName("radios");
-        if(radios[0].checked==true){
-           gender = "male";
-        } else if(radios[1].checked==true){
-            gender = "female";
-        } else {
-            console.log("pass");
-        }
 
-        
-        switch (gender){
-            case gender ==("male"):
-                if(day==0){
-                    alert("You were born on "+weekDays[0] + "You akan name is "+ male[0]);
-                } else if(day==1){
-                    alert("You were born on "+weekDays[1] + "Your akan name is " + male[1]);
-                } else if(day ==2){
-                    alert("You were born a "+weekDays[2] + "Your akan name is " +male[2]);
-                } else if(day ==3){
-                    alert("You were born on "+ weekDays[3] + "You akan name is "+male[3]);
-                } else if( day==4){
-                    alert("You were born on "+weekDays[4] + "Your akan name is "+male[4]);
-                } else if(day==5){
-                    alert("You were born on "+weekDays[5] + "You akan name is "+male[5]);
-                } else if(day==6){
-                    alert("You were born on "+weekDays[6] +"You akan name is "+male[6]);
-                } else{
-                    console.log("pass");
-                }
-                break;
-            case gender == ("female"):
-                if(day==1){
-                    alert("You were born on a "+ weekDays[0] +"You akan name is "+female[0]);
-                } else if(day==2){
-                    alert("You were born on a "+weekDays[1] +"Your akan name is "+female[1]);
-                } else if(day ==3){
-                    alert("You were born on a "+weekDays[2] +"You akan name is "+female[2]);
-                } else if(day ==4){
-                    alert("You were born on a "+weekDays[3] +"Your akan name is "+female[3]);
-                } else if(day ==5){
-                    alert("You were born on a "+weekDays[4] +"You akan name is"+female[4]);
-                } else if(day ==6){
-                    alert("You were born on a "+weekDays[5] +"Your akan name is "+female[5]);
-                } else if(day ==-0){
-                    alert("You were born on a "+weekDays[6] +"Your akan name is "+female[6]);
-                } else {
-                    console.log("pass")
-                }
-                break;
-            default:
-                console.log("pass");
+var weekDays = ["Sunday.", "Monday.", "Tuesday.", "Wednesday.", "Thursday.", "Friday.", "Saturday."];
+var males = ["Kwasi.", "Kwadwo.", "Kwabena.", "Kwaku.", "Yaw.", "Kofi.", "Kwame."]
+var females = ["Akosua.", "Adwoa.", "Abena.", "Akua.", "Yaa.", "Afua.", "Ama."];
 
-        }
-    } 
-    
-    function getName(){
-        var day =akan();
-        genders();       
+var DD, MM, CC, d, year, YY;
+var gender = document.getElementsByName("genders");
+function validate() {
+    var gender = document.getElementsByName("genders");
+    if (document.form1.year.value == "" || document.form1.year.value.length != 4 || isNaN(document.form1.year.value)) {
+        document.getElementById("yearerror").innerHTML = ("Please enter a valid year of birth");
+        return false;
     }
-    
- 
-function validate(){
+    else if (document.form1.month.value == "" || document.form1.month.value > 12 || document.form1.month.value <= 0 || isNaN(document.form1.year.value)) {
+        document.getElementById("montherror").innerHTML = (" Please enter a valid month.");
+        return false;
 
-     akan();
-    if(cdate >20){
-        alert("Please enter a valid century date.");
-    } else {
-        console.log("Date is valid");
     }
-    if(year<0 || year >100){
-        alert("Please enter a valid year.")
-    } else {
-        console.log("Year is valid");
+    else if (document.form1.date.value == "" || document.form1.date.value > 31 || document.form1.date.value <= 0 || isNaN(document.form1.year.value)) {
+        document.getElementById("dateerror").innerHTML = ("Enter a valid date of birth!");
+        return false;
     }
-    if(month<1 || month> 12){
-        alert("Please enter a valid month.");
-    } else {
-        console.log("Date is valid");
-    }
-    if(date<1 || date> 31){
-        alert("Please enter a valid date.");
-    } else {
-        console.log("Date is valid.");
+    else if (gender[0].checked == false && gender[1].checked == false) {
+        document.getElementById("gendererror").innerHTML = ("Please select your gender.");
+        return false;
     }
 }
+function calculate() {
+    year = document.getElementById("year").value;
+    MM = parseInt(document.getElementById("month").value);
+    DD = parseInt(document.getElementById("date").value);
+    CC = parseInt(year.substring(0, 2));
+    YY = parseInt(year.substring(2, 4));
+    d = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+    
+    return (Math.floor(d));
+}
+function checkGender() {
+    calculate();
+    if (gender[0].checked == true) {
+        var male = gender;
+    }
+    else if (gender[1].checked == true) {
+        var female = gender;
+    }
+    else {
+        console.log("pass");
+    }
+    switch (gender) {
+        case male:
+            if (calculate() == 1) {
+                alert("You were born on " + weekDays[0] + ". Your akan name is " + males[0] + "!");
+            }
+            else if (calculate() == 2) {
+                alert("You were born on " +weekDays[1] + ". Your akan name is " + males[1] + "!");
+            }
+            else if (calculate() == 3) {
+                alert("You were born on " + weekDays[2] + ". Your akan name is " + males[2] + "!");
+            }
+            else if (calculate() == 4) {
+                alert("You were born on " + weekDays[3] + ". Your akan name is " + males[3] + "!");
+            }
+            else if (calculate() == 5) {
+                alert("You were born on " + weekDays[4] + ". Your akan name is " + males[4] + "!");
+            }
+            else if (calculate() == 6) {
+                alert("You were born on " + weekDays[5] + ". Your akan name is " + males[5] + "!");
+            }
+            else if (calculate() == -0) {
+                alert("You were born on " + weekDays[6] + ". Your akan name is " + males[6] + "!");
+            }
+            break;
+        case female:
+            if (calculate() == 1) {
+                alert("You were born on " + weekDays[0] + ". Your akan name is  " + females[0] + "!");
+            }
+            else if (calculate() == 2) {
+                alert("You were born on " + weekDays[1] + ". Your akan name is " + females[1] + "!");
+            }
+            else if (calculate() == 3) {
+                alert("You were born on " + weekDays[2] + ". Your akan name is " + females[2] + "!");
+            }
+            else if (calculate() == 4) {
+                alert("You were born on " + weekDays[3] + ". Your akan name is " + females[3] + "!");
+            }
+            else if (calculate() == 5) {
+                alert("You were born on " + weekDays[4] + ". Your akan name is " + females[4] + "!");
+            }
+            else if (calculate() == 6) {
+                alert("You were born on " + weekDays[5] + ". Your akan name is " + females[5] + "!");
+            } else if (calculate() == -0) {
+                alert("You were born on " + weekDays[6] + ". Your akan name is " + females[6] + "!");
+            }
+            break
+        default:
 
+    }
+}

@@ -1,78 +1,37 @@
-html{
-    scroll-behavior: smooth;    
+#yearerror, #montherror, #dateerror, #gendererror{
+    color: red;
+    font-size: 16px;
 }
-body{
-     background-image: url("https://trade.babymoos.com/wp/wp-content/uploads/Punk-Baby-Top-Pink-Girls-Skull-T-Shirt-Funky-Glitter-Skull-Print-Toddler-Bright-Cool-Pink-Clothes1.jpg");
-    
-    background-repeat: no-repeat;
+#three{
+    background-image:url("../bg1.jpg");
+    background-position: center;
     background-size: cover;
+}
+.overlay{
+    background-color: rgba(0,0,0,0.4);
+    width: 60%;
+    margin:auto;
+    color: white;
+}
+form{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+#one{
+    text-align: center;
+    text-decoration: underline;
     
 }
 #one1{
-    
-    height:100%;
-    width:100%;
-    z-index:2;
-    background-color:rgba(0,0,0,0.3);
-}
-#one{
-    background-color: black;
-    height:110px;
-    top:0; 
-}
-h1{
-    color: hotpink;
     text-align: center;
-    padding-top: 20px;
-    font-family: 'Tangerine', cursive;
-    font-size: 90px;
-}
-#two2{
-text-align: center;
-border:2px solid hotpink;
-height: 110px;
-width: 60%;
-margin:auto;
-margin-top:45px;
-background-color:rgb(238, 192, 192);
-border-radius: 5px;
-}
-button{
-    text-align: center;
-    background-color: hotpink;
-    margin-left: 47%;
-    margin-top: 40px;
-    font-size: 24px;
-    border:2px solid hotpink;
-    border-radius: 7px;
-}
-a { text-decoration: none;
-}
-h3{
-    color:rgb(238, 192, 192);
-    text-align: center;
-    margin-top:35px;
-    font-size: 30px;
-}
-li{
-    color: hotpink;
-    text-align: center;
-    font-size: 30px;
+    color: rgba(0,0,0);
     text-decoration: none;
 }
-h4{
-    font-size:30px;
-}
-form{
-    text-align: center;
-    color: hotpink;
-    font-size: 24px;
-}
-input[type=submit]{
-    text-align:center;
-    margin-left: 48%;
-    border:2px solid hotpink;
-    border-radius: 5px;
-    background-color: hotpink;
-    font-size: 30px;
+ul li{
+    text-decoration: none;
+    display :inline;
+    padding: 2%;
+    font-size: 20px;
 }
