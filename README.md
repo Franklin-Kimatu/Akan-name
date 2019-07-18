@@ -12,8 +12,8 @@
 * Gender
 
 ## Known Bugs
-* slow speed.
-* Not displaying exact day after user's input validation.
+* Some days are not so accurate.
+
 ## Technologies Used
 * HTML.
 * CSS.
@@ -23,9 +23,6 @@
 * Email :frankimatu@gmail.com
 * Tel : 0790800808
 ### License
-* The myAkan_name application has been coded and licensed under The Lastborn Tech Company.*
-Copyright (c) 2019.
+* MIT.
+ * Copyright (c) 2019.
 
-      Lastborn Tech Company.
-      
-      Franklin_kimatu 
